@@ -1,19 +1,20 @@
 package Day_05.threads;
 
-public class BankAccount {
+public class SAfeBankAccount {
     int balance = 1000;
 
-    void withdrawl(int amount){
+    synchronized void withdrawl(int amount){
         balance -= amount;
     }
+
     public static void main(String[] args) throws Exception {
         SAfeBankAccount acc = new SAfeBankAccount();
         Thread t1 = new Thread(() -> acc.withdrawl(500));
         Thread t2 = new Thread(() -> acc.withdrawl(500));
         t1.start();
         t2.start();
-        // t1.join();
-        // t2.join();
+        t1.join();
+        t2.join();
         // join() will make sure that the main thread
         // waits for the child thread to complete
         System.out.println(acc.balance);
@@ -21,12 +22,13 @@ public class BankAccount {
 }
 
 /*
-Both the threads t1 and t2 acess and modify the samae balance variable
-simultaneously. Due to lack of synchronization, the final balance becomes inconsistent.
+Code Explanation:
+The synchronization keyword ensures that only one thread can execute the withdraw() operaation
+at a time, preventing Race condition and ensuring correct balance deduction.
 
-ℹ️Points to remember:
-⭐ Shared data causes issues
-⭐ Execution order is unpredectible
-⭐ Leads to data inconsistency
-⭐ Need synchronization to solve the race condition.
+ℹ️Points to remember
+⭐ synchronization avoids RACE condition
+⭐ Locks critical section in an application
+⭐ Slower but safe
+⭐ Essential for shared resources
 */
