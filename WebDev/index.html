@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- DOCTYPE is written to tell the browser that this is an html document-->
+<!-- Most of the html tags have an opening tag and closing tag-->
+<!-- All the meta information regerading your website stays inside the head tag-->
+<head>
+    <!--title is used to give info about what the current page is doing-->
+    <title>My first web page</title>
+</head>
+<!-- whatever we write in the body is visible in the webpage-->
+ <body>
+    <h1>SNPSU-ISE-B</h1>
+    <P>This is my first webpage and we are learning html. <br>
+    we are snpsu 8th floor <br>
+    Today is first day of web development training</P>
+    <h1>My heading</h1>
+    <h2>sub heading</h2>
+    <h3>smaller heading</h3>
+    <h4>Even smaller heading</h4>
+    <h5>tiny heading</h5>
+    <h6>smallest heading</h6>
+    <p><b>Bold text</b></p>
+    <p><i>Italic text</i></p>
+    <p><u>Underline text</u></p>
+    <p><small>smaller text</small></p>
+    <p>Java is <del>not</del> an OOP language</p>
+    <p><del>Deleted</del></p>
+    <p>2<sup>3</sup></p>
+    <p>log<sub>2</sub>n</p>
+    <p>text <sup>Superscript </sup><sub>subscript</sub></p>
+    <a href="https://google.com" target="_blank">Click here</a><br>
+    <a href="aboutPage.html">aboutPage</a>
+    
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+    </ul>
+    <ol>
+        <li>C</li>
+        <li>C++</li>
+        <li>JAVA</li>
+    </ol>
+
+    <ul>
+        <li>Frontned
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+        </li>
+        <li>Backend
+            <ul>
+                <li>SQL</li>
+                <li>JDBC</li>
+                <li>Node.js</li>
+            </ul>
+        </li>
+    </ul>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>course</th>
+        </tr>
+        <tr>
+            <td>Vishal</td>
+            <td>Ise</td>
+            <td>MernStack</td>
+        </tr>
+        <tr>
+            <td>yashas</td>
+            <td>Ise</td>
+            <td>machine learning</td>
+        </tr>
+    </table>
+<br>
+
+    <form action="/submit" method="post">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="student_name" placeholder="enter your name here" required><br><br>
+        <label for="email">email: </label>
+        <input type="email" id="email" name="student_email" placeholder="enter your email here" required><br><br>
+        <label for="password">password: </label>
+        <input type="password" id="password" name="student_password" placeholder="enter your password here" required><br><br>
+        <b>choose gender</b><br>
+        <input type="radio" name="Gender" value="male"> Male
+        <input type="radio" name="Gender" value="female">Female<br><br>
+
+        <input type="checkbox" name="subscriber">Subscribe to our weekly magazine
+        <input type="checkbox" name="RegisterDemo">Register fro demo <br>
+        <label for="course"> select course</label>
+        <br>
+        <select id="course" name="course">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JS</option>
+        </select>
+        <br><br>
+        <input type="date"><br>
+        <textarea row="5" cols="50" placeholder="Your message here"></textarea><br>
+        <input type="submit"><br>
+        <input type="reset" value="reset">
+    </form>
+    <br>
+
+    <audio controls>
+        <source src="song.mp3" type="audio/mpeg">
+        Browser doesnt support the audio element
+    </audio><br>
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Browser doesnt support the video element
+    </video>
+    <br>
+    <iframe width="300" height="205" src="https://www.youtube.com/embed/mdvMXDUoWto?si=8uHgVM0AcxjFJ8Py"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+ </body>
