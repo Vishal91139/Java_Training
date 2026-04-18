@@ -54,7 +54,8 @@ body {
     height: 100%;                 /* Covers full height */
     background-color: var(--modal-overlay); /* Applies the dimming overlay */
     align-items: center;          /* Vertically centers the modal box */
-    justify-content: center;       /* Horizontally centers the modal box */
+    justify-content: center; 
+    display: none;      /* Horizontally centers the modal box */
 }
 
 .modal-content {
@@ -489,4 +490,28 @@ body {
 .topic-links {
     display: flex;                /* Group of links on the right */
     gap: 10px;                    /* Space between link badges */
+}
+
+/* Responisve design */
+@media screen and (max-width: 768px){
+    .app-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .sidebar.collapsed {
+        width: 100%;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .topic-item{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .topic-links {
+        align-self: flex-end;
+    }
 }

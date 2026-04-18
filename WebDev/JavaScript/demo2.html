@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <p id="demo">This is the original text</p>
+    <button onclick="changeText()">Click me</button>
+    <button id="Btn">Hover over me</button>
+    <script>
+        function changeText() {
+            let demo = document.getElementById("demo")
+            demo.innerText = "Text changed"
+            demo.style.color = "red"
+        }
+        document.getElementById("Btn").onmouseover = function() {
+            alert("you hovered over the mouse")
+        }
+    </script>
+</body>
+</html>

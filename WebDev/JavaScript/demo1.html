@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt example</title>
+</head>
+<body>
+    <h2 id="welcome">Hello students!!</h2>
+     <script>   
+        document.getElementById("welcome").textContent = "hello back"
+        let name = "vishal";
+        let age = 21
+        const PI = 3.14
+        let isStudent = true
+        console.log(name,age,PI,isStudent)
+
+        // create function to find the area of a circle
+        function areaOfCircle(radius){
+            return 2*3.14*radius
+        }
+        const result = areaOfCircle(7)
+        console.log("The area of circle is: "+result+"sq. units")
+     </script>
+</body>
+</html>
